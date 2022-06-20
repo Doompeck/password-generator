@@ -38,37 +38,37 @@ function generatePassword() {
     characterArray = numbers.concat(specialChar, upperCase, lowerCase);
   }  
   // Selections of 3 arrays:
-  else if (specialChar && numbers && lowerCase) {
+  else if (specialBoolean && numbersBoolean && lowerCaseBoolean) {
     characterArray = specialChar.concat(numbers, lowerCase);
-  } else if (specialChar && numbers && upperCase) {
+  } else if (specialBoolean && numbersBoolean && upperCaseBoolean) {
     characterArray = specialChar.concat(numbers, upperCase);
-  }else if (numbers && upperCase && lowerCase) {
+  }else if (numbersBoolean && upperCaseBoolean && lowerCaseBoolean) {
     characterArray = numbers.concat(upperCase, lowerCase);
-  }else if (specialChar && upperCase && lowerCase) {
+  }else if (specialBoolean && upperCaseBoolean && lowerCaseBoolean) {
     characterArray = specialChar.concat(upperCase, lowerCase);
   }
   // Selections of 2 arrays:
-  else if (upperCase && lowerCase) {
+  else if (upperCaseBoolean && lowerCaseBoolean) {
     characterArray = upperCase.concat(lowerCase);
-  }else if (lowerCase && numbers) {
+  }else if (lowerCaseBoolean && numbersBoolean) {
     characterArray = lowerCase.concat(numbers);
-  }else if (upperCase && numbers) {
+  }else if (upperCaseBoolean && numbersBoolean) {
     characterArray = upperCase.concat(numbers);
-  } else if (specialChar && lowerCase) {
+  } else if (specialBoolean && lowerCaseBoolean) {
     characterArray = specialChar.concat(lowerCase);
-  } else if (specialChar && upperCase) {
+  } else if (specialBoolean && upperCaseBoolean) {
     characterArray = specialChar.concat(upperCase);
-  } else if (specialChar && numbers) {
+  } else if (specialBoolean && numbersBoolean) {
     characterArray = specialChar.concat(numbers);
   }
   // Single selections:
-  else if (specialChar) {
+  else if (specialBoolean) {
     characterArray = specialChar;
-  } else if (numbers) {
+  } else if (numbersBoolean) {
     characterArray = numbers;
-  } else if (upperCase) {
+  } else if (upperCaseBoolean) {
     characterArray = upperCase;
-  } else if (lowerCase) {
+  } else if (lowerCaseBoolean) {
     characterArray = lowerCase;
   }
   console.log(characterArray);
