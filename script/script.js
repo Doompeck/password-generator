@@ -77,9 +77,10 @@ function generatePassword() {
   for (var i = 0; i < passwordLength; i++) {
     var passwordChoice = characterArray[Math.floor(Math.random() * characterArray.length)];
     password.push(passwordChoice);
-  }
-console.log(password);
+    }
 
+    var passwordText = document.querySelector("#password");
+    passwordText.value = password;
   
   // var password = generatePassword();
   // var passwordText = document.querySelector("#password");
