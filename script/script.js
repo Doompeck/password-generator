@@ -71,7 +71,15 @@ function generatePassword() {
   } else if (lowerCaseBoolean) {
     characterArray = lowerCase;
   }
-  console.log(characterArray);
+
+  var password = [];
+
+  for (var i = 0; i < passwordLength; i++) {
+    var passwordChoice = characterArray[Math.floor(Math.random() * characterArray.length)];
+    password.push(passwordChoice);
+  }
+console.log(password);
+
   
   // var password = generatePassword();
   // var passwordText = document.querySelector("#password");
