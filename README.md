@@ -15,7 +15,6 @@
 [Test Instructions](#test-instructions)<br>
 [Contribution Guidelines](#contribution)<br>
 [Preview Image](#preview-image)<br>
-[Video Walkthrough](#video-walkthrough)<br>
 [GitHub username](#github-username)<br>
 [Contact Me!](#contact-me-with-questions)<br>
 ​
@@ -25,31 +24,24 @@ Benjamin Stanfield
 ​
 ## Deployed Page
 ​
-https://best-book-search-google.herokuapp.com/
+https://doompeck.github.io/password-generator/
 ​
 ## GitHub Repo
 ​
-[kimberlym4488](https://github.com/kimberlym4488/best-book-search)
+[Password Generator](https://github.com/Doompeck/password-generator)
 ​
-## Video Walkthrough
+
+​## Project Description
 ​
-Server side functionality walk-through in Apollo GQL.
-https://www.loom.com/share/9747a14cb3d94cb4a2adaf455306c89b
-​
-Client side functionality walk-through in live app.
-https://www.loom.com/share/572ec2e1e46d4e559b5cf2b6aeded4f6
-​
-## Project Description
-​
-Uses ApolloGraphQL, MongoDB, and Heroku/MongoDB Atlas Deployment. Search the google book api and save them to your account! Provides book removal functionality and all details you could ever need on almost any book!
+A password generator that is based on basic user choices.  Goal was to understand arrays and how to combine them based on user choices.  Once choices were made the function concats an array of those choices and then randomly selects a length of the users choosing.  
 ​
 ## Installation
 ​
-Please run an npm install from the root package.json file. To simply use the app, visit the deployment link above.
+Click the deployment link above.
 ​
 ## Usage
 ​
-To search google books and save favorites to your account.
+A quick and easy random password generator.
 ​
 ## Test Instructions
 ​
@@ -61,12 +53,12 @@ n/a
 ​
 ## Preview Image
 ​
-[![image](https://user-images.githubusercontent.com/92805933/162827426-1261cab8-17b4-440e-aa67-24b4a2ccc77d.png)](https://github.com/kimberlym4488/best-book-search/issues/1)
+[![image](./assets/images/Password%20Generator.gif)](./assets/images/Password%d20Generator.gif)
 ​
 ## GitHub userName
 ​
-[kimberlym4488](https://github.io/kimberlym4488)
+[Doompeck](https://github.com/Doompeck)
 ​
 ## Contact me with questions
 ​
-kmorandev@gmail.com
+towheadcreative@gmail.com
