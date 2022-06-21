@@ -8,15 +8,15 @@ var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p"
 var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var numbers = ["1","2","3","4","5","6","7","8","9","0"];
 var specialChar = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
-// This is the array based on confirmation choices.
+// This is the character array based on confirmation choices.
 var characterArray;
 var generateBtn = document.querySelector("#generate");
 
-
-// Write password to the #password input
 function generatePassword() {
   passwordLength = prompt("Enter a number between 8 and 128");
-// Validating that any value has been entered for password length and if it meets the criteria.
+
+  // Validating that any value has been entered for password length and if it meets the criteria.
+  // Wrapped this within the function so that the prompts only activate upon clicking Generate Password.
   if (!passwordLength) {
     alert("You need to enter a value.");
   } else if (passwordLength < 8 || passwordLength > 128) {
@@ -37,6 +37,7 @@ function generatePassword() {
   else if (numbersBoolean && specialChar && upperCaseBoolean && lowerCaseBoolean) {
     characterArray = numbers.concat(specialChar, upperCase, lowerCase);
   }  
+  
   // Selections of 3 arrays:
   else if (specialBoolean && numbersBoolean && lowerCaseBoolean) {
     characterArray = specialChar.concat(numbers, lowerCase);
@@ -47,6 +48,7 @@ function generatePassword() {
   }else if (specialBoolean && upperCaseBoolean && lowerCaseBoolean) {
     characterArray = specialChar.concat(upperCase, lowerCase);
   }
+  
   // Selections of 2 arrays:
   else if (upperCaseBoolean && lowerCaseBoolean) {
     characterArray = upperCase.concat(lowerCase);
@@ -61,7 +63,8 @@ function generatePassword() {
   } else if (specialBoolean && numbersBoolean) {
     characterArray = specialChar.concat(numbers);
   }
-  // Single selections:
+  
+  // Single array selections:
   else if (specialBoolean) {
     characterArray = specialChar;
   } else if (numbersBoolean) {
@@ -71,9 +74,11 @@ function generatePassword() {
   } else if (lowerCaseBoolean) {
     characterArray = lowerCase;
   }
-// empty array for every password generated.  Prevents overlapping multiple password generations.
+
+  // Empty array for every password generated.  Prevents overlapping multiple password generations.
   var password = [];
 
+  // Forloop that iterates a random array index for the length entered.
   for (var i = 0; i < passwordLength; i++) {
     var passwordChoice = characterArray[Math.floor(Math.random() * characterArray.length)];
     password.push(passwordChoice);
@@ -84,5 +89,5 @@ function generatePassword() {
     passwordText.value = password.join("");
 }
 
-// Add event listener to generate button
+// Event listener to begin the generatePassword function on click.
 generateBtn.addEventListener("click", generatePassword);
