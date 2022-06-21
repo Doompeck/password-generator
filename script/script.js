@@ -71,7 +71,7 @@ function generatePassword() {
   } else if (lowerCaseBoolean) {
     characterArray = lowerCase;
   }
-
+// empty array for every password generated.  Prevents overlapping multiple password generations.
   var password = [];
 
   for (var i = 0; i < passwordLength; i++) {
@@ -79,14 +79,9 @@ function generatePassword() {
     password.push(passwordChoice);
     }
 
+  // Injects the password as a string in the text area element in the html.
     var passwordText = document.querySelector("#password");
-    passwordText.value = password;
-  
-  // var password = generatePassword();
-  // var passwordText = document.querySelector("#password");
-
-  // passwordText.value = password;
-
+    passwordText.value = password.join("");
 }
 
 // Add event listener to generate button
